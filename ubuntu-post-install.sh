@@ -51,8 +51,10 @@ echo ''
 echo 'Installing selected favourite applications...'
 echo ''
 echo 'Current package list:
+blender
 couchdb
 curl
+dpkg
 filezilla
 geany
 geany-plugin-addons
@@ -61,6 +63,7 @@ gimp
 gimp-plugin-registry
 git
 guake
+htop
 icontool
 imagemagick
 inkscape
@@ -71,8 +74,10 @@ python-pip
 python3-distutils-extra
 scons
 synaptic
+vim
 terminator
 vlc
+w3m
 wxmaxima'
 echo ''
 read -p 'Proceed? (Y)es, (N)o : ' REPLY
@@ -84,7 +89,7 @@ case $REPLY in
     # Update
     sudo apt-get update
     # Install.
-    sudo apt-get install -y --no-install-recommends couchdb curl filezilla geany geany-plugins geany-plugin-addons gimp gimp-plugin-registry git guake icontool imagemagick inkscape mercurial openjdk-7-jdk openssh-server python-pip python3-distutils-extra scons synaptic terminator vlc wxmaxima
+    sudo apt-get install -y --no-install-recommends blender couchdb curl dpkg filezilla geany geany-plugins geany-plugin-addons gimp gimp-plugin-registry git guake htop icontool imagemagick inkscape mercurial openjdk-7-jdk openssh-server python-pip python3-distutils-extra scons synaptic terminator vim vlc w3m wxmaxima 
     echo 'Setting terminator as default terminal'
     gsettings set org.gnome.desktop.default-applications.terminal exec 'terminator'
     echo 'Changing background'
